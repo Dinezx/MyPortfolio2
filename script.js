@@ -91,3 +91,19 @@ document.getElementById('contact-form').addEventListener('submit', e => {
     form.reset();
   }, 3000);
 });
+
+/* ===== 3D INTERACTIVE BACKGROUND (VANTA.JS) ===== */
+if (typeof VANTA !== 'undefined') {
+  VANTA.TOPOLOGY({
+    el: "#bg-animation",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0xe8430a,      // Accent Orange/Red
+    backgroundColor: 0xf5f0ea // Cream background
+  });
+}
