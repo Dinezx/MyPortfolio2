@@ -77,7 +77,7 @@ document.getElementById('contact-form').addEventListener('submit', e => {
   const message = form.querySelector('textarea').value.trim();
 
   // ⚠️ REPLACE with your WhatsApp number (country code + number, no spaces/dashes)
-  const whatsappNumber = '91XXXXXXXXXX';
+  const whatsappNumber = '917339399353';
 
   const text = `Hi, I'm *${name}*%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
   const url = `https://wa.me/${whatsappNumber}?text=${text}`;
@@ -105,5 +105,16 @@ if (typeof VANTA !== 'undefined') {
     scaleMobile: 1.00,
     color: 0xe8430a,      // Accent Orange/Red
     backgroundColor: 0xf5f0ea // Cream background
+  });
+}
+
+/* ===== 3D HOLOGRAM FOR HERO IMAGE ===== */
+if (typeof VanillaTilt !== 'undefined') {
+  VanillaTilt.init(document.querySelector(".hero-photo-wrap"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3,
+    scale: 1.02
   });
 }
