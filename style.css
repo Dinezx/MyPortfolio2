@@ -103,14 +103,9 @@ section{position:relative;padding:7rem 3rem}
 .skill-category:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.06);border-color:var(--accent)}
 .skill-cat-icon{font-size:1.5rem;margin-bottom:.75rem}
 .skill-cat-title{font-family:var(--font-heading);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem}
-.skill-item{margin-bottom:.85rem}
-.skill-item-header{display:flex;justify-content:space-between;margin-bottom:.35rem}
-.skill-item-name{font-size:.85rem;font-weight:500}
-.skill-item-pct{font-family:var(--font-mono);font-size:.75rem;color:var(--accent);font-weight:500}
-.skill-bar{height:5px;background:rgba(0,0,0,0.06);border-radius:5px;overflow:hidden}
-.skill-bar-fill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--accent),#ff6b3d);width:0;transition:width 1.2s cubic-bezier(.25,.46,.45,.94)}
 .skill-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
-.skill-tag{font-size:.75rem;padding:.35rem .85rem;background:var(--accent-light);color:var(--accent);border-radius:50px;font-weight:600}
+.skill-tag{font-size:.8rem;padding:.4rem 1rem;background:var(--accent-light);color:var(--accent);border-radius:50px;font-weight:600;transition:.3s;cursor:default}
+.skill-tag:hover{background:var(--accent);color:var(--white);transform:translateY(-2px)}
 
 /* EXPERIENCE */
 .timeline{position:relative;padding-left:2.5rem}

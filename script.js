@@ -68,15 +68,26 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ===== CONTACT FORM ===== */
+/* ===== CONTACT FORM → WHATSAPP ===== */
 document.getElementById('contact-form').addEventListener('submit', e => {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = '#2d9c3c';
+  const form = e.target;
+  const name = form.querySelector('input[type="text"]').value.trim();
+  const email = form.querySelector('input[type="email"]').value.trim();
+  const message = form.querySelector('textarea').value.trim();
+
+  // ⚠️ REPLACE with your WhatsApp number (country code + number, no spaces/dashes)
+  const whatsappNumber = '91XXXXXXXXXX';
+
+  const text = `Hi, I'm *${name}*%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
+  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+  window.open(url, '_blank');
+
+  const btn = form.querySelector('button');
+  btn.textContent = 'Opening WhatsApp ✓';
   setTimeout(() => {
-    btn.textContent = 'Send Message →';
-    btn.style.background = '';
-    e.target.reset();
+    btn.textContent = 'Send via WhatsApp →';
+    form.reset();
   }, 3000);
 });
